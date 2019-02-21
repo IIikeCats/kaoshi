@@ -1,0 +1,110 @@
+body,html{
+	width: 100%;
+	height: 100%;
+}
+li{
+	list-style: none;
+}
+.box_one{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+/* 头部 */
+.top_header{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
+	width: 100%;
+	height: 40px;
+	background: #f2f2f2;
+}
+.top_header img{
+	width: 20px;
+	height: 20px;
+
+}
+.top_header .top_input{
+	flex: 1;
+	background: #FFFFFF;
+	border: 1px solid #ccc;
+	margin: 0 10px;
+	
+}
+.top_header .top_input input{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/* 中间 */
+.section_b{
+	width: 100%;
+	height: 100%;
+	flex: 1;
+	overflow: hidden;
+}
+.section_b .section_p{
+	height: 40px;
+}
+.section_lis{
+	width: 120%;
+	height: 30px;
+	overflow: hidden;
+	line-height: 30px;
+	overflow-x: auto;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.section_lis li{
+	width: ;
+	padding: 0 10px;
+}
+.section_b .section_top{
+	width: 120%;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+.section_b .section_top dl{
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* 尾部 */
+.footer_b{
+	width: 100%;
+	background: #FFFFFF;
+	border-top: 1px solid #CCCCCC;
+	display: flex;
+}
+.footer_b dl{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.footer_b dl dd{
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	margin-top:10px;
+
+}
+.footer_b dl dt{
+	width:15px ;
+	height: 15px ;
+	margin-left:36px;
+}
+.footer_b dl dt img{
+	width:15px ;
+	height: 15px ;
+}

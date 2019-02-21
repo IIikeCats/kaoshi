@@ -6,11 +6,122 @@
     <title></title>
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script type="text/javascript" charset="utf-8">
       	mui.init();
     </script>
 </head>
 <body>
-	
+	<div id="box_one">
+		<header class="mui-bar mui-bar-nav top_header">
+			<img src="images/1.jpg" >
+			<div class="top_input">
+				<input type="" name="" id="" value="搜索商品名称" />
+			</div>
+			<img src="images/2.jpg" >
+		</header>
+		<section class="section_b">
+			<p class="section_p"></p>
+			<div class="section_lis" id="uls">
+				<!-- <li>推荐</li>
+				<li>手机</li>
+				<li>智能</li>
+				<li>电视</li>
+				<li>推荐</li>
+				<li>手机</li>
+				<li>智能</li>
+				<li>电视</li> -->
+				
+			</div>
+			<div class="section_top" id="nr">
+				<!-- <dl>
+					<dt>
+						<img src="images/3.jpg" >
+					</dt>
+					<dd>569</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="images/3.jpg" >
+					</dt>
+					<dd>569</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="images/3.jpg" >
+					</dt>
+					<dd>569</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="images/3.jpg" >
+					</dt>
+					<dd>569</dd>
+				</dl>
+				<dl>
+					<dt>
+						<img src="images/3.jpg" >
+					</dt>
+					<dd>569</dd>
+				</dl> -->
+			</div>
+		</section>
+		<footer class="footer_b">
+			<dl>
+				<dt>
+					<img src="images/6.jpg" >
+				</dt>
+				<dd>首页</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/6.jpg" >
+				</dt>
+				<dd>分类</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/6.jpg" >
+				</dt>
+				<dd>购物车</dd>
+			</dl>
+			<dl>
+				<dt>
+					<img src="images/6.jpg" >
+				</dt>
+				<dd>我的</dd>
+			</dl>
+		</footer>
+	</div>
+	<script type="text/javascript">
+		
+		mui.ajax('./data/data.json',{
+			data:{
+				category:'news'
+			},
+			dataType:'json',//服务器返回json格式数据
+			type:'get',//HTTP请求类型
+			success:function(data){
+				//获得服务器响应
+				// console.log(data);
+				var lis=document.getElementById('uls');
+				var nr=document.getElementById('nr');
+				var html=``;
+				var str=``;
+				data.map(function(item){
+					// console.log(item)
+					html+=`<li>${item.name}</li>`;
+					str+=`<dl>
+								<dt>
+									<img src="${item.img}" >
+								</dt>
+								<dd>${item.sum}</dd>
+							</dl>`
+				})
+				lis.innerHTML=html
+				nr.innerHTML=str
+			}
+		});
+	</script>
 </body>
 </html>
